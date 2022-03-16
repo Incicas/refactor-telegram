@@ -1,0 +1,14 @@
+name: sample-workflow
+on: [push]
+jobs:
+  explore-first-github-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Ala bala"
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "asdavsdvs"
+      - name: List fikes in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "This job's status is ".|
